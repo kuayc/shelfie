@@ -1,5 +1,5 @@
 module.exports = {
-  read: (req, res, next) => {
+  read: (req, res) => {
     const dbInstance = req.app.get("db");
 
     dbInstance
@@ -10,7 +10,8 @@ module.exports = {
         console.log(err);
       });
   },
-  create: (req, res, next) => {
+
+  create: (req, res) => {
     const dbInstance = req.app.get("db");
     const { name, price, image_url } = req.body;
 
@@ -22,7 +23,7 @@ module.exports = {
         console.log(err);
       });
   },
-  delete: (req, res, next) => {
+  delete: (req, res) => {
     const dbInstance = req.app.get("db");
     const { id } = req.params;
 
@@ -34,7 +35,8 @@ module.exports = {
         console.log(err);
       });
   },
-  update: (req, res, next) => {
+
+  update: (req, res) => {
     const dbInstance = req.app.get("db");
     const { name, price, image_url } = req.body;
     const { id } = req.params;
@@ -47,6 +49,7 @@ module.exports = {
         console.log(err);
       });
   },
+
   getOne: (req, res, next) => {
     const dbInstance = req.app.get("db");
     const { id } = req.params;
