@@ -1,37 +1,27 @@
-import React, { Component } from 'react';
-import Product from '../product/Product';
-import './dashboard.css';
-import axios from './node_modules/axios'
-
-class Dashboard extends Component {
-	constructor(){
-		super()
-		this.state={
-			inventoryList:[]
-		}
-	}
-	componentWillMount() {
-		this.getItemList();
-	}
-	componentDidUpdate(){
-		this.getItemList()
-	}
-	getItemList() {
-		axios.get('/api/inventory').then((response) => {
-			this.setState({ inventoryList: response.data });
-		});
-	}
-	render() {
-		const list = this.state.inventoryList.map((product, index) => {
-			return (
-				<Product
-					getItemList={()=>this.getItemList()}
-					currentProduct={product}
-					key={index}
-				/>
-			);
-		});
-		return <div>{list}</div>;
-	}
+import React, { Component } from "react";
+import "./Dashboard.css";
+export default class Dashboard extends Component {
+  render() {
+    return (
+      <div>
+        {this.props.inventoryList.map((product, i) => (
+          <div key={i} className="product-container">
+            <img className="img" src={product.img_url} alt="" />
+            <div className="product-box">
+              <p>{product.product_name}</p>
+              <p>{product.price}</p>
+            </div>
+            <div className="product-btns">
+              <button onClick={id => this.props.deleteProduct(product.id)}>
+                Delete
+              </button>
+              <button onClick={id => this.props.editingProduct(id)}>
+                edit
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
-export default Dashboard;

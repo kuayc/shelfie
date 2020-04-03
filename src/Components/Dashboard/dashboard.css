@@ -5,15 +5,11 @@
     background: red;
  margin-top:10vh;
  margin-left: 10vh;
-
 }
-
 .product-box{
     display: flex;
     flex-direction: row;
-
 }
-
 .img{
     width: 30vw;
     height: 30vh;
