@@ -14,7 +14,7 @@ class App extends Component {
           <div className="body-content">
             <Switch>
               <Route exact path="/" component={Dashboard} />
-              <Route path="/new-product-form" component={Form} />
+              <Route exact path="/new-product-form" component={Form} />
               <Route path="/edit-product-form/:id" component={Form} />
             </Switch>
           </div>
