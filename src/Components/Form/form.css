@@ -1,0 +1,10 @@
+.input-btn-container{
+    background: #b00
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left:55vw;
+    top:40vh;
+}
