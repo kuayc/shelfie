@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import Product from '../product/Product';
 import './dashboard.css';
-import axios from 'axios'
+import axios from './node_modules/axios'
 
 class Dashboard extends Component {
 	constructor(){

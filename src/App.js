@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Dashboard from "./components/dashboard/Dashboard";
-import Form from "./components/form/Form";
-import Header from "./components/header/Header";
+import Dashboard from "./Components/dashboard/Dashboard";
+import Form from "./Components/form/Form";
+import Header from "./Components/header/Header";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Dashboard} />
               <Route exact path="/new-product-form" component={Form} />
-              <Route path="/edit-product-form/:id" component={Form} />
+              <Route exact path="/edit-product-form/:id" component={Form} />
             </Switch>
           </div>
         </div>

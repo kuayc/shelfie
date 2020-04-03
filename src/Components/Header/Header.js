@@ -1,6 +1,6 @@
-import React from 'react';
+import React from './node_modules/react';
 import './header.css';
-import { Link } from 'react-router-dom';
+import { Link } from './node_modules/react-router-dom';
 
 export default function Header() {
 	return (

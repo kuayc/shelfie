@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import React, { Component } from "./node_modules/react";
+import axios from "./node_modules/axios";
+import { Link } from "./node_modules/react-router-dom";
 
 class Form extends Component {
   constructor(props) {

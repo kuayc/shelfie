@@ -1,6 +1,6 @@
-import React from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React from './node_modules/react';
+import axios from './node_modules/axios';
+import { Link } from './node_modules/react-router-dom';
 
 export default function Product(props) {
 	return (
