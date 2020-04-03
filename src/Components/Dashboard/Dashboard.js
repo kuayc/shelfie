@@ -1,4 +1,4 @@
-import React, { Component } from './node_modules/react';
+import React, { Component } from 'react';
 import Product from '../product/Product';
 import './dashboard.css';
 import axios from './node_modules/axios'
