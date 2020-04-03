@@ -17,7 +17,7 @@ massive(process.env.CONNECTION_STRING)
   .catch(err => console.log(err));
 
 app.get("/api/inventory", controller.read);
-app.post("/api/inventory", controller.create);
+app.post("/api/product", controller.create);
 app.delete("/api/inventory/:id", controller.delete);
 app.put("/api/inventory/:id", controller.update);
 app.get("/api/inventory/:id", controller.getOne);
