@@ -31,7 +31,7 @@ module.exports = {
       .delete_product([id])
       .then(() => res.sendStatus(200))
       .catch(err => {
-        res.status(500).send({ errorMessage: "Oops! There is a problem." });
+        res.status(500).send({ errorMessage: "Oops! There is a problem, again." });
         console.log(err);
       });
   },
