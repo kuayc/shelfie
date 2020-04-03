@@ -23,6 +23,7 @@ module.exports = {
         console.log(err);
       });
   },
+
   delete: (req, res) => {
     const dbInstance = req.app.get("db");
     const { id } = req.params;
@@ -31,7 +32,9 @@ module.exports = {
       .delete_product([id])
       .then(() => res.sendStatus(200))
       .catch(err => {
-        res.status(500).send({ errorMessage: "Oops! There is a problem, again." });
+        res
+          .status(500)
+          .send({ errorMessage: "Oops! There is a problem, again." });
         console.log(err);
       });
   },
