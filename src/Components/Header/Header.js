@@ -11,7 +11,7 @@ export default function Header() {
 				alt="logo"
 			/>
 			<div>
-				<h1>SHELFIE</h1>
+				<h1>Shielfie</h1>
 			</div>
 			<div>
 				<Link to="/">
