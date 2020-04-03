@@ -11,7 +11,7 @@ export default function Header() {
         alt="corporate-logo"
       />
       <div>
-        <h1>Shelfie</h1>
+        <h1>Selfy</h1>
       </div>
       <div>
         <Link to="/">
